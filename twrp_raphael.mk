@@ -27,10 +27,10 @@ $(call inherit-product, vendor/twrp/config/common.mk)
 $(call inherit-product, device/xiaomi/raphael/device.mk)
 
 # Setup FBEv1 and FBEv2 Configurations
-ifeq ($(FOX_VARIANT),FBEv2)
-$(call inherit-product, device/xiaomi/raphael/FBEv2.mk)
-else
+ifeq ($(FOX_VARIANT),FBEv1)
 $(call inherit-product, device/xiaomi/raphael/FBEv1.mk)
+else
+$(call inherit-product, device/xiaomi/raphael/FBEv2.mk)
 endif
 
 ## Device identifier. This must come after all inclusions
