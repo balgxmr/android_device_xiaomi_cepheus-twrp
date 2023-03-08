@@ -7,8 +7,8 @@
 /cache          ext4     /dev/block/bootdevice/by-name/cache
 /boot           emmc     /dev/block/bootdevice/by-name/boot
 /dtbo           emmc     /dev/block/bootdevice/by-name/dtbo                      flags=display="dtbo";backup=1;flashimg=1
-/system_root    ext4   	 /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui
-/vendor         ext4     /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui
+/system_root    erofs	 /dev/block/bootdevice/by-name/system                    flags=display="System";backup=0;wipeingui
+/vendor         erofs    /dev/block/bootdevice/by-name/vendor                    flags=display="Vendor";backup=0;wipeingui
 /cust           ext4   	 /dev/block/bootdevice/by-name/cust                      flags=display="Cust";wipeingui
  
 /metadata       ext4     /dev/block/bootdevice/by-name/metadata			         flags=display="Metadata";backup=1;wipeingui
