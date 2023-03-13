@@ -13,6 +13,23 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.crypto.volume.metadata.method=dm-default-key \
     ro.crypto.volume.options=::v2 
 
+# Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# fastbootd
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    android.hardware.fastboot@1.0-impl-mock.recovery \
+    fastbootd 
+
+TW_INCLUDE_FASTBOOTD := true
+
+#BootHal
+PRODUCT_PACKAGES += \
+    android.hardware.boot@1.1-impl-qti \
+    android.hardware.boot@1.1-impl-qti.recovery \
+    android.hardware.boot@1.1-service
+
 # Default FS type
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 
