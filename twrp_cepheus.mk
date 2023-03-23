@@ -15,8 +15,8 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := raphael
-DEVICE_PATH := device/xiaomi/raphael
+PRODUCT_RELEASE_NAME := cepheus
+DEVICE_PATH := device/xiaomi/cepheus
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
@@ -24,18 +24,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 $(call inherit-product, vendor/twrp/config/common.mk)
 
 # Inherit device configuration
-$(call inherit-product, device/xiaomi/raphael/device.mk)
+$(call inherit-product, device/xiaomi/cepheus/device.mk)
 
 # Setup FBEv1 and FBEv2 Configurations
 ifeq ($(FOX_VARIANT),FBEv1)
-$(call inherit-product, device/xiaomi/raphael/FBEv1.mk)
+$(call inherit-product, device/xiaomi/cepheus/FBEv1.mk)
 else
-$(call inherit-product, device/xiaomi/raphael/FBEv2.mk)
+$(call inherit-product, device/xiaomi/cepheus/FBEv2.mk)
 endif
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := raphael
-PRODUCT_NAME := twrp_raphael
+PRODUCT_DEVICE := cepheus
+PRODUCT_NAME := twrp_cepheus
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Mi 9T Pro
+PRODUCT_MODEL := Mi 9
 PRODUCT_MANUFACTURER := Xiaomi
